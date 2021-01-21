@@ -1,13 +1,24 @@
 import pytest
 from pages.product_page import ProductPage
 from pages.login_page import LoginPage
+from pages.basket_page import BasketPage
+
+
+@pytest.mark.parametrize("link", ["offer0", "offer1", "offer2", "offer3", "offer4", "offer5", "offer6",
+                                  pytest.param("offer7", marks=pytest.mark.xfail), "offer8", "offer9"])
+def test_guest_can_add_product_to_basket_promo(browser, link):
+    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo={link}"
+    page = ProductPage(browser, link)
+    page.open()
+    page.add_to_busket()
+    page.solve_quiz_and_get_code()
+    page.matching_name()
+    page.matching_price()
 
 
 @pytest.mark.need_review
-@pytest.mark.parametrize("link", ["offer0", "offer1", "offer2", "offer3", "offer4", "offer5", "offer6",
-                                  pytest.param("offer7", marks=pytest.mark.xfail), "offer8", "offer9"])
-def test_guest_can_add_product_to_basket(browser, link):
-    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo={link}"
+def test_guest_can_add_product_to_basket(browser):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer2"
     page = ProductPage(browser, link)
     page.open()
     page.add_to_busket()
@@ -54,6 +65,16 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.go_to_login_page()
+
+
+@pytest.mark.need_review
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+    page = BasketPage(browser, link)
+    page.open()
+    page.go_to_basket_page()
+    page.should_be_empty_basket()
+    page.should_be_message_empty_basket()
 
 
 class TestUserAddToBasketFromProductPage():
