@@ -141,15 +141,13 @@
 			<param name="оперативная память">2 Гб</param>
 			<param name="встроеная память">16 ГБ</param>
 			<param name="цена за полную стоимость">2006800 сум</param>
-			<param name="цена в рассрочку">От 167735 сум/мес</param>
 			<param name="емкость батареи">2400 мАч</param>
 			<param name="название модели">Galaxy J3</param>
 			<param name="разрешение фронтальной камеры">5 МП</param>
-			<param name="код">X0000003657</param>
+			<param name="код">X0000006666</param>
 		</item>
 		<item>
 			<param name="название производителя смартфона">Samsung</param>
-			<param name="модель">(2017) SM-J530F Black</param>
 			<param name="процессор">8	 Ядер</param>
 			<param name="тип дисплея и его размер">5.2&quot; (13.2 см) Super AMOLED</param>
 			<param name="разрешение камеры">13 МП</param>
@@ -160,7 +158,7 @@
 			<param name="емкость батареи">3000 мАч</param>
 			<param name="название модели">Galaxy J5</param>
 			<param name="разрешение фронтальной камеры">13 МП</param>
-			<param name="код">X0000003658</param>
+			<param name="код">X0000007777</param>
 		</item>
 		<item>
 			<param name="название производителя смартфона">Samsung</param>
@@ -172,9 +170,8 @@
 			<param name="цена за полную стоимость">3054200 сум</param>
 			<param name="цена в рассрочку">От 255280 сум/мес</param>
 			<param name="емкость батареи">3600 мАч</param>
-			<param name="название модели">Galaxy J7</param>
 			<param name="разрешение фронтальной камеры">13 МП</param>
-			<param name="код">X0000003659</param>
+			<param name="код">X0000008888</param>
 		</item>
 		<item>
 			<param name="название производителя смартфона">Samsung</param>
